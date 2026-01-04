@@ -1,0 +1,272 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background-color: #0f172a; /* bleu-noir */
+  color: #e5e7eb;
+  line-height: 1.5;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  max-width: 1200px;
+  margin: 0 auto 16px auto;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #f9fafb;
+  letter-spacing: 0.2px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+main {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+/* =========================
+   PANELS
+========================= */
+.panel {
+  background: #020617;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.panel h2 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   TON TAS
+========================= */
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 32px;
+  padding: 4px 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: default;
+  transition: transform 0.1s;
+}
+
+/* couleurs selon type de carte */
+.pill.bonus {
+  background: #10b981; /* vert */
+}
+.pill.number {
+  background: #2563eb; /* bleu */
+}
+.pill.multiplier {
+  background: #f59e0b; /* orange */
+}
+
+.pill:hover {
+  transform: scale(1.05);
+}
+
+.pill button {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.pill button:hover {
+  opacity: 1;
+}
+
+/* =========================
+   ADD CARD
+========================= */
+.add-card {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.add-card select {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #0f172a;
+  color: #f9fafb;
+}
+
+.add-card button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-card button:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   AUTRES / DÉFAUSSE
+========================= */
+.other-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0px 12px;
+}
+
+.other-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 0;
+   margin-right: 12px;
+}
+
+.other-card span:first-child {
+  color: #6273f4;
+  min-width: 40px;
+  font-weight: 900;
+  font-size: 15px;
+  padding: 10px 0;
+  padding-left: 6px;
+  border-left: 2px solid #475569;
+}
+
+/* compteur + / - */
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.counter span {
+  min-width: 18px;
+  text-align: center;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.counter button {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: #1e293b;
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.counter button:hover {
+  background: #2563eb;
+}
+
+/* =========================
+   RESULTS
+========================= */
+.results {
+  display: grid;
+  gap: 10px;
+}
+
+.results button {
+  align-self: flex-start;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.results button:hover {
+  background: #1d4ed8;
+}
+
+.result-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+.result-line strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f9fafb;
+}
+
+/* =========================
+   WARNINGS
+========================= */
+#warning {
+  font-size: 13px;
+  color: #f87171;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (min-width: 900px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .results {
+    grid-column: span 2;
+  }
+}

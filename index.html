@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flip 7 — Calculateur</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Flip 7 — Calculateur de probabilités</h1>
+</header>
+
+<main>
+
+  <section class="panel">
+    <h2>Ton tas</h2>
+
+    <div id="my-pile" class="pill-container"></div>
+
+    <div class="add-card">
+      <select id="add-card-select"></select>
+      <button id="add-card-btn">+</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Cartes sorties (autres joueurs + défausse)</h2>
+    <div id="other-pile" class="other-grid"></div>
+  </section>
+
+  <section class="panel results">
+    <button id="compute">Calculer</button>
+    <div class="result-line">
+      <span>Risque de perdre</span>
+      <strong id="lose-proba">—</strong>
+    </div>
+    <div class="result-line">
+      <span>Chance de bonus</span>
+      <strong id="bonus-proba">—</strong>
+    </div>
+    <div id="warning"></div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
