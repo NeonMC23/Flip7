@@ -270,3 +270,110 @@ main {
     grid-column: span 2;
   }
 }
+
+/* =========================
+   RESPONSIVE TABLET / MOBILE
+========================= */
+@media (max-width: 899px) {
+  body {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  .panel {
+    padding: 12px;
+  }
+
+  .pill-container {
+    gap: 6px;
+    min-height: 28px;
+  }
+
+  .pill {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .add-card select,
+  .add-card button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .other-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    gap: 6px 0;
+  }
+
+  .other-card span:first-child {
+    font-size: 14px;
+    padding-left: 4px;
+    min-width: 35px;
+  }
+
+  .counter button {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
+  .result-line {
+    font-size: 13px;
+  }
+
+  .result-line strong {
+    font-size: 15px;
+  }
+
+  .results button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   MOBILE ULTRA SMALL
+========================= */
+@media (max-width: 500px) {
+  body {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 15px;
+  }
+
+  .pill {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .add-card select,
+  .add-card button {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  .counter button {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .other-card span:first-child {
+    font-size: 13px;
+    min-width: 30px;
+  }
+
+  .result-line strong {
+    font-size: 14px;
+  }
+
+  .results button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
